@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuScreen));
             this.exitButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
+            this.delayTimer = new System.Windows.Forms.Timer(this.components);
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.textTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // exitButton
@@ -69,19 +73,46 @@
             this.newButton.UseVisualStyleBackColor = false;
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
-            // MainScreen
+            // delayTimer
+            // 
+            this.delayTimer.Enabled = true;
+            this.delayTimer.Interval = 300;
+            this.delayTimer.Tick += new System.EventHandler(this.delayTimer_Tick);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.titleLabel.ForeColor = System.Drawing.Color.White;
+            this.titleLabel.Location = new System.Drawing.Point(175, 244);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(62, 13);
+            this.titleLabel.TabIndex = 20;
+            this.titleLabel.Text = "Simon Says";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textTimer
+            // 
+            this.textTimer.Enabled = true;
+            this.textTimer.Interval = 20;
+            this.textTimer.Tick += new System.EventHandler(this.textTimer_Tick);
+            // 
+            // MenuScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.newButton);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "MainScreen";
+            this.Name = "MenuScreen";
             this.Size = new System.Drawing.Size(301, 300);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,5 +120,8 @@
 
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button newButton;
+        private System.Windows.Forms.Timer delayTimer;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Timer textTimer;
     }
 }

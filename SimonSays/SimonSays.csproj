@@ -109,9 +109,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blue.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\green.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +122,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SimonSaysImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chip-mode-danijel-zambo-main-version-02-05-1431.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cyborg-ninja-kevin-macleod-main-version-03-00-7993.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-over-danijel-zambo-main-version-02-03-1394.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

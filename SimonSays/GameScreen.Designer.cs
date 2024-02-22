@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.yellowButton = new System.Windows.Forms.Button();
             this.blueButton = new System.Windows.Forms.Button();
             this.redButton = new System.Windows.Forms.Button();
             this.greenButton = new System.Windows.Forms.Button();
+            this.delayTimer = new System.Windows.Forms.Timer(this.components);
+            this.computerTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // yellowButton
@@ -42,6 +45,7 @@
             this.yellowButton.Size = new System.Drawing.Size(110, 110);
             this.yellowButton.TabIndex = 3;
             this.yellowButton.UseVisualStyleBackColor = false;
+            this.yellowButton.Click += new System.EventHandler(this.yellowButton_Click);
             // 
             // blueButton
             // 
@@ -51,6 +55,7 @@
             this.blueButton.Size = new System.Drawing.Size(110, 110);
             this.blueButton.TabIndex = 2;
             this.blueButton.UseVisualStyleBackColor = false;
+            this.blueButton.Click += new System.EventHandler(this.blueButton_Click);
             // 
             // redButton
             // 
@@ -60,6 +65,7 @@
             this.redButton.Size = new System.Drawing.Size(110, 110);
             this.redButton.TabIndex = 1;
             this.redButton.UseVisualStyleBackColor = false;
+            this.redButton.Click += new System.EventHandler(this.redButton_Click);
             // 
             // greenButton
             // 
@@ -70,6 +76,16 @@
             this.greenButton.TabIndex = 0;
             this.greenButton.UseVisualStyleBackColor = false;
             this.greenButton.Click += new System.EventHandler(this.greenButton_Click);
+            // 
+            // delayTimer
+            // 
+            this.delayTimer.Interval = 10;
+            this.delayTimer.Tick += new System.EventHandler(this.delayTimer_Tick);
+            // 
+            // computerTimer
+            // 
+            this.computerTimer.Interval = 10;
+            this.computerTimer.Tick += new System.EventHandler(this.computerTimer_Tick);
             // 
             // GameScreen
             // 
@@ -94,5 +110,7 @@
         private System.Windows.Forms.Button blueButton;
         private System.Windows.Forms.Button redButton;
         private System.Windows.Forms.Button greenButton;
+        private System.Windows.Forms.Timer delayTimer;
+        private System.Windows.Forms.Timer computerTimer;
     }
 }
