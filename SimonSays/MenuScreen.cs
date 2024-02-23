@@ -13,6 +13,7 @@ namespace SimonSays
     {
         bool textGrow = true;
         int textGrowCounter;
+        double cursorDistance;
 
         List<Font> fonts = new List<Font>();
 
@@ -50,30 +51,33 @@ namespace SimonSays
             }
         }
 
+        //change screen
         private void newButton_Click(object sender, EventArgs e)
         {
             Form1.ChangeScreen(this, new GameScreen());
         }
 
-
+        //close program
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //make image spin
         private void delayTimer_Tick(object sender, EventArgs e)
         {
             this.BackgroundImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
             Refresh();
         }
 
+        //make text pulse
         private void textTimer_Tick(object sender, EventArgs e)
         {
             if (textGrowCounter >= fonts.Count())
             {
                 textGrow = false;
             }
-            else if (textGrowCounter <= 1)
+            else if (textGrowCounter <= 0)
             {
                 textGrow = true;
             }
@@ -89,16 +93,14 @@ namespace SimonSays
                 textGrowCounter--;
             }
 
+            cursorDistance = Math.Sqrt(((Cursor.Position.X - 870) * (Cursor.Position.X - 870)) + ((Cursor.Position.Y - 455) * (Cursor.Position.Y - 455)));
             try
             {
-                textTimer.Interval = Math.Abs(Convert.ToInt16((Cursor.Position.X - 810) / 10));
+                textTimer.Interval = Convert.ToInt32(cursorDistance / 5);
             }
             catch
             {
-
             }
-
         }
-        //484, 48
     }
 }

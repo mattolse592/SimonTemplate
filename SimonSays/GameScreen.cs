@@ -129,6 +129,7 @@ namespace SimonSays
             Form1.ChangeScreen(this, new GameOverScreen());
         }
 
+        //runs delays to not use Thread.sleep
         private void delayTimer_Tick(object sender, EventArgs e)
         {
             switch (timerStep)

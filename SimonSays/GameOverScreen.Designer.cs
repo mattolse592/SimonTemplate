@@ -114,6 +114,7 @@
             this.scoreLabel1.Name = "scoreLabel1";
             this.scoreLabel1.Size = new System.Drawing.Size(88, 46);
             this.scoreLabel1.TabIndex = 5;
+            this.scoreLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // scoreLabel2
             // 
@@ -124,6 +125,7 @@
             this.scoreLabel2.Name = "scoreLabel2";
             this.scoreLabel2.Size = new System.Drawing.Size(88, 46);
             this.scoreLabel2.TabIndex = 6;
+            this.scoreLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // scoreLabel3
             // 
@@ -134,6 +136,7 @@
             this.scoreLabel3.Name = "scoreLabel3";
             this.scoreLabel3.Size = new System.Drawing.Size(88, 46);
             this.scoreLabel3.TabIndex = 7;
+            this.scoreLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GameOverScreen
             // 

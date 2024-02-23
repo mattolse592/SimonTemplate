@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Matthew Olsen
+//Feb 23 2024
+//Simon Says game
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
